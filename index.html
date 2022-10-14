@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CONVERTER</title>
+	<link rel="stylesheet" href="./src/styles/css/main.min.css" />
+</head>
+<body id="converter">
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-white">
+		<div class="container">
+		  <a class="navbar-brand text-primary" id="logo" href="#"><b>CJLacaste | SC</b></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+  
+		  <div class="collapse navbar-collapse" id="navbarsExample07">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link text-primary" href="">Home</a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">KodeGo Activities</a>
+				<div class="dropdown-menu" aria-labelledby="dropdown07">
+				  <a class="dropdown-item" href="">Action</a>
+				  <a class="dropdown-item" href="">Another action</a>
+				  <a class="dropdown-item" href="">Something else here</a>
+				</div>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	</nav>
+
+	<div class="container content">
+		<div class="converter__container">
+			<h1 class="text-primary">Weight and Mass Converter</h1>
+			<input type="text" id="inputValue"  onkeyup="convert()" placeholder="Input number eg. 123"/>
+			<select name="firstSelection" id="firstSelection" onchange="convert()">
+				<option value="kg">kilogram [kg]</option>
+				<option value="g">gram [g]</option>
+				<option value="mg">miligram [mg]</option>
+				<option value="t">ton [t]</option>
+				<option value="lbs">pound [lbs]</option>
+				<option value="oz">ounce [oz]</option>
+			</select>
+			<hr>
+			<input type="text" id="result" disabled/>
+			<select name="secondSelection" id="secondSelection" onchange="convert()">
+				<option value="kg">kilogram [kg]</option>
+				<option value="g" selected>gram [g]</option>
+				<option value="mg">miligram [mg]</option>
+				<option value="t">ton [t]</option>
+				<option value="lbs">pound [lbs]</option>
+				<option value="oz">ounce [oz]</option>
+			</select>
+		</div>
+	</div>
+	<div>
+		<!--Waves Container-->
+		<div>
+			<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+			viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+			<defs>
+			<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+			</defs>
+			<g class="parallax">
+			<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+			<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+			<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+			<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+			</g>
+			</svg>
+		</div>
+		<!--Waves end-->
+	</div>
+	<script src="./src/js/converter.js"></script>
+</body>
+</html>
